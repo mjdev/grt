@@ -9,7 +9,7 @@ build/examples/*.csv
 obj/
 libs/
 
-# Created by https://www.gitignore.io/api/c++,intellij,cmake,xcode,visualstudio,python
+# Created by https://www.gitignore.io/api/c++,intellij,cmake,xcode,visualstudio,python,qt
 
 ### C++ ###
 # Compiled Object files
@@ -265,7 +265,7 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
-# TODO: Comment the next line if you want to checkin your web deploy settings 
+# TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
@@ -405,3 +405,39 @@ docs/_build/
 # PyBuilder
 target/
 
+
+### Qt ###
+# C++ objects and libs
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Qt-es
+
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile*
+*-build-*
+
+# QtCreator
+
+*.autosave
+
+#QtCtreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
