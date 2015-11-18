@@ -263,6 +263,7 @@
 		B087D2821BFCC22C00A01E35 /* Util.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D1831BFCC22C00A01E35 /* Util.h */; };
 		B087D2831BFCC22C00A01E35 /* WarningLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B087D1841BFCC22C00A01E35 /* WarningLog.cpp */; };
 		B087D2841BFCC22C00A01E35 /* WarningLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D1851BFCC22C00A01E35 /* WarningLog.h */; };
+		B087D2941BFCCF2A00A01E35 /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -522,6 +523,7 @@
 		B087D1831BFCC22C00A01E35 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		B087D1841BFCC22C00A01E35 /* WarningLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WarningLog.cpp; sourceTree = "<group>"; };
 		B087D1851BFCC22C00A01E35 /* WarningLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLog.h; sourceTree = "<group>"; };
+		B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		B0E6BF271BFCBFC200C0851B /* grt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = grt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1287,9 +1289,19 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		B087D2851BFCCB4600A01E35 /* ObjCWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */,
+			);
+			name = ObjCWrapper;
+			path = ../iOS/ObjCWrapper;
+			sourceTree = "<group>";
+		};
 		B0E6BF1D1BFCBFC200C0851B = {
 			isa = PBXGroup;
 			children = (
+				B087D2851BFCCB4600A01E35 /* ObjCWrapper */,
 				B087D04A1BFCC22C00A01E35 /* GRT */,
 				B087D0451BFCC00300A01E35 /* Supporting Files */,
 				B0E6BF281BFCBFC200C0851B /* Products */,
@@ -1311,6 +1323,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B087D2941BFCCF2A00A01E35 /* BridgingHeader.h in Headers */,
 				B087D25D1BFCC22C00A01E35 /* IndexedDouble.h in Headers */,
 				B087D27A1BFCC22C00A01E35 /* TimeSeriesClassificationSampleTrimmer.h in Headers */,
 				B087D2601BFCC22C00A01E35 /* Log.h in Headers */,
@@ -1736,6 +1749,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1746,6 +1760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mjdev.grt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1753,6 +1768,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -2,7 +2,7 @@
 //  grt.h
 //  grt
 //
-//  Created by M J on 18/11/15.
+//  Created by mjahnen on 18/11/15.
 //  Copyright © 2015 jahnen. All rights reserved.
 //
 
