@@ -106,7 +106,7 @@ install_manifest.txt
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
+#build/
 DerivedData
 
 ## Various settings
@@ -146,7 +146,7 @@ xcuserdata
 [Rr]eleases/
 x64/
 x86/
-build/
+#build/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -357,7 +357,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-build/
+#build/
 develop-eggs/
 dist/
 downloads/
