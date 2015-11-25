@@ -264,6 +264,8 @@
 		B087D2831BFCC22C00A01E35 /* WarningLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B087D1841BFCC22C00A01E35 /* WarningLog.cpp */; };
 		B087D2841BFCC22C00A01E35 /* WarningLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D1851BFCC22C00A01E35 /* WarningLog.h */; };
 		B087D2941BFCCF2A00A01E35 /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B09F4EFD1C05FF9A00003871 /* GestureRecognitionPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = B09F4EFB1C05FF9A00003871 /* GestureRecognitionPipeline.h */; };
+		B09F4EFE1C05FF9A00003871 /* GestureRecognitionPipeline.mm in Sources */ = {isa = PBXBuildFile; fileRef = B09F4EFC1C05FF9A00003871 /* GestureRecognitionPipeline.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -524,6 +526,8 @@
 		B087D1841BFCC22C00A01E35 /* WarningLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WarningLog.cpp; sourceTree = "<group>"; };
 		B087D1851BFCC22C00A01E35 /* WarningLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLog.h; sourceTree = "<group>"; };
 		B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		B09F4EFB1C05FF9A00003871 /* GestureRecognitionPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognitionPipeline.h; sourceTree = "<group>"; };
+		B09F4EFC1C05FF9A00003871 /* GestureRecognitionPipeline.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GestureRecognitionPipeline.mm; sourceTree = "<group>"; };
 		B0E6BF271BFCBFC200C0851B /* grt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = grt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1293,6 +1297,8 @@
 			isa = PBXGroup;
 			children = (
 				B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */,
+				B09F4EFB1C05FF9A00003871 /* GestureRecognitionPipeline.h */,
+				B09F4EFC1C05FF9A00003871 /* GestureRecognitionPipeline.mm */,
 			);
 			name = ObjCWrapper;
 			path = ../iOS/ObjCWrapper;
@@ -1467,6 +1473,7 @@
 				B087D2211BFCC22C00A01E35 /* ZeroCrossingCounter.h in Headers */,
 				B087D1BE1BFCC22C00A01E35 /* SoftmaxModel.h in Headers */,
 				B087D1B61BFCC22C00A01E35 /* MinDistModel.h in Headers */,
+				B09F4EFD1C05FF9A00003871 /* GestureRecognitionPipeline.h in Headers */,
 				B087D2821BFCC22C00A01E35 /* Util.h in Headers */,
 				B087D2421BFCC22C00A01E35 /* Neuron.h in Headers */,
 				B087D26B1BFCC22C00A01E35 /* Random.h in Headers */,
@@ -1568,6 +1575,7 @@
 				B087D1A81BFCC22C00A01E35 /* ContinuousHiddenMarkovModel.cpp in Sources */,
 				B087D2431BFCC22C00A01E35 /* LinearRegression.cpp in Sources */,
 				B087D2371BFCC22C00A01E35 /* LowPassFilter.cpp in Sources */,
+				B09F4EFE1C05FF9A00003871 /* GestureRecognitionPipeline.mm in Sources */,
 				B087D2741BFCC22C00A01E35 /* ThreadPool.cpp in Sources */,
 				B087D2791BFCC22C00A01E35 /* TimeSeriesClassificationSampleTrimmer.cpp in Sources */,
 				B087D1D21BFCC22C00A01E35 /* BernoulliRBM.cpp in Sources */,

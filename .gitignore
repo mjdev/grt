@@ -8,6 +8,7 @@ build/examples/*.txt
 build/examples/*.csv
 obj/
 libs/
+build/examples
 
 # Created by https://www.gitignore.io/api/c++,intellij,cmake,xcode,visualstudio,python,qt
 
