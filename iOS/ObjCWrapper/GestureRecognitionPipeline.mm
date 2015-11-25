@@ -37,4 +37,9 @@
     return self.instance->load(std::string(path.UTF8String));
 }
 
+- (NSUInteger)predictedClassLabel
+{
+    return self.instance->getPredictedClassLabel();
+}
+
 @end

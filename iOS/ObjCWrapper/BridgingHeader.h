@@ -9,5 +9,6 @@
 #ifndef BridgingHeader_h
 #define BridgingHeader_h
 
+#import "GestureRecognitionPipeline.h"
 
 #endif /* BridgingHeader_h */
