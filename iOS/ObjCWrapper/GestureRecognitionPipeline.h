@@ -10,7 +10,8 @@
 
 @interface GestureRecognitionPipeline : NSObject
 
+@property (readonly, getter=predictedClassLabel) NSUInteger predictedClassLabel;
+
 - (BOOL)load:(NSString *) path;
-- (NSUInteger)predictedClassLabel;
 
 @end
