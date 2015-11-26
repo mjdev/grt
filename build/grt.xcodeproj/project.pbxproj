@@ -166,7 +166,6 @@
 		B087D2201BFCC22C00A01E35 /* ZeroCrossingCounter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B087D1171BFCC22C00A01E35 /* ZeroCrossingCounter.cpp */; };
 		B087D2211BFCC22C00A01E35 /* ZeroCrossingCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D1181BFCC22C00A01E35 /* ZeroCrossingCounter.h */; };
 		B087D2221BFCC22C00A01E35 /* GRT.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D1191BFCC22C00A01E35 /* GRT.h */; };
-		B087D2241BFCC22C00A01E35 /* grt_wrap.cxx in Sources */ = {isa = PBXBuildFile; fileRef = B087D11B1BFCC22C00A01E35 /* grt_wrap.cxx */; };
 		B087D2251BFCC22C00A01E35 /* ClassLabelChangeFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B087D11D1BFCC22C00A01E35 /* ClassLabelChangeFilter.cpp */; };
 		B087D2261BFCC22C00A01E35 /* ClassLabelChangeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D11E1BFCC22C00A01E35 /* ClassLabelChangeFilter.h */; };
 		B087D2271BFCC22C00A01E35 /* ClassLabelFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B087D11F1BFCC22C00A01E35 /* ClassLabelFilter.cpp */; };
@@ -428,7 +427,6 @@
 		B087D1171BFCC22C00A01E35 /* ZeroCrossingCounter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZeroCrossingCounter.cpp; sourceTree = "<group>"; };
 		B087D1181BFCC22C00A01E35 /* ZeroCrossingCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZeroCrossingCounter.h; sourceTree = "<group>"; };
 		B087D1191BFCC22C00A01E35 /* GRT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRT.h; sourceTree = "<group>"; };
-		B087D11B1BFCC22C00A01E35 /* grt_wrap.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = grt_wrap.cxx; sourceTree = "<group>"; };
 		B087D11D1BFCC22C00A01E35 /* ClassLabelChangeFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassLabelChangeFilter.cpp; sourceTree = "<group>"; };
 		B087D11E1BFCC22C00A01E35 /* ClassLabelChangeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassLabelChangeFilter.h; sourceTree = "<group>"; };
 		B087D11F1BFCC22C00A01E35 /* ClassLabelFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassLabelFilter.cpp; sourceTree = "<group>"; };
@@ -562,7 +560,6 @@
 				B087D0E41BFCC22C00A01E35 /* DataStructures */,
 				B087D0F61BFCC22C00A01E35 /* FeatureExtractionModules */,
 				B087D1191BFCC22C00A01E35 /* GRT.h */,
-				B087D11B1BFCC22C00A01E35 /* grt_wrap.cxx */,
 				B087D11C1BFCC22C00A01E35 /* PostProcessingModules */,
 				B087D1231BFCC22C00A01E35 /* PreProcessingModules */,
 				B087D1381BFCC22C00A01E35 /* RegressionModules */,
@@ -1643,7 +1640,6 @@
 				B087D19F1BFCC22C00A01E35 /* DTW.cpp in Sources */,
 				B087D1E51BFCC22C00A01E35 /* Classifier.cpp in Sources */,
 				B087D2331BFCC22C00A01E35 /* HighPassFilter.cpp in Sources */,
-				B087D2241BFCC22C00A01E35 /* grt_wrap.cxx in Sources */,
 				B087D2811BFCC22C00A01E35 /* Util.cpp in Sources */,
 				B087D2411BFCC22C00A01E35 /* Neuron.cpp in Sources */,
 				B087D2351BFCC22C00A01E35 /* LeakyIntegrator.cpp in Sources */,
