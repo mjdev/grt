@@ -31,6 +31,8 @@
 #include "../../CoreModules/MLBase.h"
 #include "../../CoreModules/GestureRecognitionPipeline.h"
 
+#include <functional>
+
 namespace GRT {
 
 template< class T > 
@@ -249,4 +251,4 @@ protected:
 
 }
 
-#endif //GRT_MEAN_SHIFT_HEADER
+#endif // header guard
