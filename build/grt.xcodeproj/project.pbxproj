@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -266,6 +266,7 @@
 		B087D2941BFCCF2A00A01E35 /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B09F4EFD1C05FF9A00003871 /* GestureRecognitionPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = B09F4EFB1C05FF9A00003871 /* GestureRecognitionPipeline.h */; };
 		B09F4EFE1C05FF9A00003871 /* GestureRecognitionPipeline.mm in Sources */ = {isa = PBXBuildFile; fileRef = B09F4EFC1C05FF9A00003871 /* GestureRecognitionPipeline.mm */; };
+		B0E751B51C1874E800E73789 /* VectorDouble.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0E751B41C1874E800E73789 /* VectorDouble.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -529,6 +530,8 @@
 		B09F4EFB1C05FF9A00003871 /* GestureRecognitionPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognitionPipeline.h; sourceTree = "<group>"; };
 		B09F4EFC1C05FF9A00003871 /* GestureRecognitionPipeline.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GestureRecognitionPipeline.mm; sourceTree = "<group>"; };
 		B0E6BF271BFCBFC200C0851B /* grt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = grt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E751B31C1874BC00E73789 /* VectorDouble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorDouble.h; sourceTree = "<group>"; };
+		B0E751B41C1874E800E73789 /* VectorDouble.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorDouble.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1299,6 +1302,8 @@
 				B087D2931BFCCF1E00A01E35 /* BridgingHeader.h */,
 				B09F4EFB1C05FF9A00003871 /* GestureRecognitionPipeline.h */,
 				B09F4EFC1C05FF9A00003871 /* GestureRecognitionPipeline.mm */,
+				B0E751B31C1874BC00E73789 /* VectorDouble.h */,
+				B0E751B41C1874E800E73789 /* VectorDouble.mm */,
 			);
 			name = ObjCWrapper;
 			path = ../iOS/ObjCWrapper;
@@ -1518,7 +1523,7 @@
 				};
 			};
 			buildConfigurationList = B0E6BF211BFCBFC200C0851B /* Build configuration list for PBXProject "grt" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1581,6 +1586,7 @@
 				B087D1D21BFCC22C00A01E35 /* BernoulliRBM.cpp in Sources */,
 				B087D1AC1BFCC22C00A01E35 /* HMM.cpp in Sources */,
 				B087D23D1BFCC22C00A01E35 /* SavitzkyGolayFilter.cpp in Sources */,
+				B0E751B51C1874E800E73789 /* VectorDouble.mm in Sources */,
 				B087D2121BFCC22C00A01E35 /* KMeansQuantizer.cpp in Sources */,
 				B087D21A1BFCC22C00A01E35 /* SOMQuantizer.cpp in Sources */,
 				B087D27C1BFCC22C00A01E35 /* TrainingDataRecordingTimer.cpp in Sources */,

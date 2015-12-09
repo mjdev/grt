@@ -42,4 +42,9 @@
     return self.instance->getPredictedClassLabel();
 }
 
+- (BOOL)predict:(VectorDouble *) inputVector
+{
+    return self.instance->predict([inputVector cppInstance]);
+}
+
 @end
