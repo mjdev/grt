@@ -10,10 +10,12 @@
 
 @interface VectorDouble : NSObject
 
+- (instancetype)initWithSize:(NSInteger) size;
+
 - (void)pushBack:(double)value;
 
 #ifdef __cplusplus
-- (GRT::VectorDouble)cppInstance;
+- (GRT::VectorDouble *)cppInstance;
 #endif
 
 @end

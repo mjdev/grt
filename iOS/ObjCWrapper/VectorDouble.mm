@@ -13,7 +13,7 @@
 #import "VectorDouble.h"
 
 @interface VectorDouble()
-@property GRT::VectorDouble instance;
+@property GRT::VectorDouble *instance;
 @end
 
 @implementation VectorDouble
@@ -22,17 +22,31 @@
 {
     self = [super init];
     if (self) {
-        
+        self.instance = new GRT::VectorDouble;
     }
     return self;
 }
 
-- (void)pushBack:(double) value
+- (instancetype)initWithSize:(NSInteger) size
 {
-    self.instance.push_back(value);
+    self = [super init];
+    if (self) {
+        self.instance = new GRT::VectorDouble(size);
+    }
+    return self;
 }
 
-- (GRT::VectorDouble)cppInstance
+- (void)dealloc
+{
+    delete self.instance;
+}
+
+- (void)pushBack:(double) value
+{
+    self.instance->push_back(value);
+}
+
+- (GRT::VectorDouble *)cppInstance
 {
     return self.instance;
 }
