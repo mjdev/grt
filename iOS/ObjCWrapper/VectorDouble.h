@@ -13,6 +13,7 @@
 - (instancetype)initWithSize:(NSInteger) size;
 
 - (void)pushBack:(double)value;
+- (void)clear;
 
 #ifdef __cplusplus
 - (GRT::VectorDouble *)cppInstance;

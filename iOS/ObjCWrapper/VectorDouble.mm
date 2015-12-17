@@ -46,6 +46,11 @@
     self.instance->push_back(value);
 }
 
+- (void)clear
+{
+    self.instance->clear();
+}
+
 - (GRT::VectorDouble *)cppInstance
 {
     return self.instance;
