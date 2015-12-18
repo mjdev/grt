@@ -45,7 +45,7 @@ vector<string> split(string s, string delimiter) {
 
 int main (int argc, const char * argv[])
 {
-    if(argc != 4) {
+    if(argc < 4) {
         return 1;
     }
 
@@ -64,6 +64,9 @@ int main (int argc, const char * argv[])
     //dtw.setOffsetTimeseriesUsingFirstSample(true);
 
     pipeline.setClassifier(dtw);
+
+    //pipeline.addPostProcessingModule(ClassLabelFilter(5, 10));
+    //pipeline.addPostProcessingModule(ClassLabelChangeFilter());
 
     LabelledTimeSeriesClassificationData trainingData;
     trainingData.setNumDimensions(3);
@@ -106,4 +109,16 @@ int main (int argc, const char * argv[])
     pipeline.train(trainingData);
 
     pipeline.save(output + "/" + std::to_string(label) + ".model");
+
+    if(argc == 5)
+    {
+        cout << "Testing now" << endl;
+
+        LabelledTimeSeriesClassificationData testData;
+        testData.loadDatasetFromFile(string(argv[4]));
+
+        pipeline.test(trainingData);
+
+        cout << "Test accuracy: " << pipeline.getTestAccuracy();
+    }
 }
