@@ -44,7 +44,7 @@ protected:
     
     virtual streamsize xsputn(const char *msg, streamsize count){
         std::string s(msg,count);
-        NSLog(@"%@", @(s.c_str()));
+        NSLog(@"GRT cout: %@", @(s.c_str()));
         return count;
     }
     
@@ -80,7 +80,15 @@ private:
 
 - (BOOL)load:(NSString *) path
 {
-    return self.instance->load(std::string(path.UTF8String));
+    BOOL result = self.instance->load(std::string(path.UTF8String));
+    
+    if (result) {
+        cout << "GRT config";
+        cout << self.instance->getModelAsString();
+        cout << "GRT info: " << self.instance->getInfo();
+    }
+    
+    return result;
 }
 
 - (NSUInteger)predictedClassLabel

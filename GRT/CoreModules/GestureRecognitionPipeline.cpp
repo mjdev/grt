@@ -3456,9 +3456,25 @@ string GestureRecognitionPipeline::getModelAsString() const{
             break;
     }
     
+    model += "PostProcessingModuleDatatypes:";
+    for(UINT i=0; i<getNumPostProcessingModules(); i++){
+        model += "\t" + postProcessingModules[i]->getPostProcessingType();
+    }
+    model += "\n";
+    
+    
+    for(UINT i=0; i<getNumPreProcessingModules(); i++){
+        model += "PreProcessingModule_" + Util::intToString(i+1) + "\n";
+    }
+    
+    
+    for(UINT i=0; i<getNumFeatureExtractionModules(); i++){
+        model += "FeatureExtractionModule_" + Util::intToString(i+1) + "\n";
+    }
+    
     return model;
 }
-    
+
 string GestureRecognitionPipeline::getPipelineModeAsString() const{
     switch( pipelineMode ){
         case PIPELINE_MODE_NOT_SET:
