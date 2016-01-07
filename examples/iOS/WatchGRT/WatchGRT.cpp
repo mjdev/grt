@@ -55,6 +55,9 @@ int main (int argc, const char * argv[])
 
     GestureRecognitionPipeline pipeline;
 
+    //pipeline.addPreProcessingModule(DeadZone(-0.1, 0.1, 3));
+    //pipeline.addPreProcessingModule(SavitzkyGolayFilter(3, 3, 0, 3, 3));
+
     DTW dtw;
 
     dtw.enableNullRejection(true);
@@ -65,7 +68,7 @@ int main (int argc, const char * argv[])
 
     pipeline.setClassifier(dtw);
 
-    //pipeline.addPostProcessingModule(ClassLabelFilter(5, 10));
+    pipeline.addPostProcessingModule(ClassLabelFilter(5, 10));
     //pipeline.addPostProcessingModule(ClassLabelChangeFilter());
 
     LabelledTimeSeriesClassificationData trainingData;
@@ -113,12 +116,13 @@ int main (int argc, const char * argv[])
     if(argc == 5)
     {
         cout << "Testing now" << endl;
+        cout << "Test accuracy: " << pipeline.getTestAccuracy() << endl;
 
         LabelledTimeSeriesClassificationData testData;
         testData.loadDatasetFromFile(string(argv[4]));
 
         pipeline.test(trainingData);
 
-        cout << "Test accuracy: " << pipeline.getTestAccuracy();
+        cout << "Test accuracy: " << pipeline.getTestAccuracy() << endl;
     }
 }
