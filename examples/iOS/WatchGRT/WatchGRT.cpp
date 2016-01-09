@@ -45,7 +45,7 @@ vector<string> split(string s, string delimiter) {
 
 int main (int argc, const char * argv[])
 {
-    if(argc != 4) {
+    if(argc < 4) {
         return 1;
     }
 
@@ -54,6 +54,9 @@ int main (int argc, const char * argv[])
     int label = atoi(argv[3]);
 
     GestureRecognitionPipeline pipeline;
+
+    //pipeline.addPreProcessingModule(DeadZone(-0.1, 0.1, 3));
+    //pipeline.addPreProcessingModule(SavitzkyGolayFilter(3, 3, 0, 3, 3));
 
     DTW dtw;
 
@@ -64,6 +67,9 @@ int main (int argc, const char * argv[])
     //dtw.setOffsetTimeseriesUsingFirstSample(true);
 
     pipeline.setClassifier(dtw);
+
+    pipeline.addPostProcessingModule(ClassLabelFilter(5, 10));
+    //pipeline.addPostProcessingModule(ClassLabelChangeFilter());
 
     LabelledTimeSeriesClassificationData trainingData;
     trainingData.setNumDimensions(3);
@@ -106,4 +112,17 @@ int main (int argc, const char * argv[])
     pipeline.train(trainingData);
 
     pipeline.save(output + "/" + std::to_string(label) + ".model");
+
+    if(argc == 5)
+    {
+        cout << "Testing now" << endl;
+        cout << "Test accuracy: " << pipeline.getTestAccuracy() << endl;
+
+        LabelledTimeSeriesClassificationData testData;
+        testData.loadDatasetFromFile(string(argv[4]));
+
+        pipeline.test(trainingData);
+
+        cout << "Test accuracy: " << pipeline.getTestAccuracy() << endl;
+    }
 }
