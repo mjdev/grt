@@ -96,6 +96,11 @@ private:
     return self.instance->getPredictedClassLabel();
 }
 
+- (double)maximumLikelihood
+{
+    return self.instance->getMaximumLikelihood();
+}
+
 - (BOOL)predict:(VectorDouble *) inputVector
 {
     return self.instance->predict(*[inputVector cppInstance]);
